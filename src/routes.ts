@@ -12,7 +12,7 @@ export function helloWorld(request: Request, response: Response) {
     'NodeJs', 
     'ReactJs', 
     'PHP', 
-    'React Native'
+    'React Native',
     { title: 'Javascript', experience: 100 },
   ],
   });
