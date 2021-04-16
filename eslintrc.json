@@ -1,42 +1,52 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": [
-        "airbnb-base"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": 12,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "@typescript-eslint"
-    ],
-    "rules": {
-      "import/extensions": [
-          "error",
-          "ignorePackages",
-          {
-            "ts": "never"
-          }
-        ]
-      },
-      "no-new": "off",
-      "no-prototype-builtins": "off",
-      "no-restricted-syntax": "off",
-      "max-classes-per-file": "off",
-      "@typescript-eslint/no-explicit-any": "off",
-      "no-console": "off",
-      "import/prefer-default-export": "off",
-      "@typescript-eslint/explicit-function-return-type": ["off"],
-    "settings": {
-      "import/resolver": {
-        "typescript": {
-          "directory": "/home/alessandro/Documentos/Developer/NodeJS RktSeat/projeto-1/tsconfig.json"
-        }
+  "env": {
+      "es6": true,
+      "node": true
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "airbnb-base"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "no-unused-vars": ["error", {
+      "argsIgnorePattern": "_"
+    }],
+    "camelcase": "off",
+    "class-methods-use-this": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never"
       }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
     }
   }
-
+}
