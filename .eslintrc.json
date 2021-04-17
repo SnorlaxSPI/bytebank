@@ -6,6 +6,7 @@
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
     "airbnb-base"
   ],
   "globals": {
@@ -28,9 +29,11 @@
     "sourceType": "module"
   },
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "prettier"
   ],
   "rules": {
+    "prettier/prettier": "error",
     "no-unused-vars": ["error", {
       "argsIgnorePattern": "_"
       }],
