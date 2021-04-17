@@ -2,6 +2,6 @@ import { Router } from 'express';
 
 const routes = Router();
 
-routes.get('/', (request, response) => response.json({ message: 'First Typescript' }));
+routes.get('/', (request, response) => response.json({ message: 'Docker Voando!!!' }));
 
 export default routes;
